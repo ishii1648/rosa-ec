@@ -2,139 +2,279 @@ body {
    font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
 }
 
-.container {
-  width: 970px;
-}
-
-h1 {
-  text-align: right;
-}
-
-h3 {
-  font-size: 190%;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-h1 a {
-  font-family: 'Abril Fatface', cursive;
-  color: black;
-}
-
-.header ul {
-  padding-left: 5%;
-  margin-top: 35px;
-}
-
-.header ul li {
-  display: inline-block;
-  padding-right: 4%;
-}
-
-.header ul li a {
-  color: black;
-}
-
 i {
   padding-right: 5px;
 }
 
-.main {
-  background: #f9f5f2;
+.container {
+  max-width: 970px;
 }
 
-.main-image {
-  width: 970px;
-  margin: 5px auto 0;
-  overflow: hidden;
-  position: relative;
-  height: 400px;
+@media (min-width: 768px) { /* pc */
+  h1 {
+    text-align: right;
+  }
+
+  h3 {
+    font-size: 190%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  h1 a {
+    font-family: 'Abril Fatface', cursive;
+    color: black;
+  }
+
+  .header ul {
+    padding-left: 5%;
+    margin-top: 35px;
+  }
+
+  .header ul li {
+    display: inline-block;
+    padding-right: 4%;
+  }
+
+  .header ul li a {
+    color: black;
+  }
+
+  .main {
+    background: #f9f5f2;
+  }
+
+  .main-image {
+    width: 870px;
+    margin: 5px auto 0;
+  }
+
+  .main-image .bx-wrapper {
+    border: none;
+    box-shadow: none;
+  }
+
+  .main-image img {
+    width: 100%;
+  }
+
+  .desc {
+    background: white;
+    padding: 30px 5%;
+  }
+
+  .desc p {
+    text-align: center;
+    font-size: 180%;
+  }
+
+  .step {
+    margin-top: 90px;
+  }
+
+  .step-box .num {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 72px;
+    height: 72px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 5px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: #4b5357;
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
+    border-radius: 50%;
+  }
+
+  .step-box .caption {
+    margin: 5px 0 20px 0;
+    padding: 23px 5% 15px;
+    font-size: 130%;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+    background: white;
+    border-radius: 2px;
+  }
+
+  .career {
+    background: white;
+    padding: 5px 5%;
+  }
+
+  .career ul {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .career-list {
+    padding-top: 20px;
+  }
+
+  .career ul li {
+    padding: 10px 0;
+    list-style: none;
+    font-size: 140%;
+  }
+
+  .about-class {
+    padding: 5px 5%;
+    /*background: white;*/
+  }
+
+  .about-class ul {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .about-class ul li {
+    font-size: 140%;
+    padding: 10px;
+    list-style: none;
+  }
+
 }
 
-.main-image img {
-  width: 100%;
-  position: absolute;
-  bottom: -185px;
-}
+@media (max-width: 767px) { /* sp */
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 
-.desc {
-  background: white;
-  padding: 30px 5%;
-}
+  h1 {
+    text-align: center;
+  }
 
-.desc p {
-  text-align: center;
-  font-size: 180%;
-}
+  h1 a {
+    font-family: 'Abril Fatface', cursive;
+    color: black;
+  }
 
-.step {
-  margin-top: 90px;
-}
+  h3 {
+    font-size: 160%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+  }
 
-.step-box .num {
-  position: absolute;
-  top: -50px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 72px;
-  height: 72px;
-  text-align: center;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  padding-top: 5px;
-  border: 1px solid rgba(0,0,0,0.1);
-  background-color: #4b5357;
-  box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
-  border-radius: 50%;
-}
+  .nav {
+    display: none;
+  }
 
-.step-box .caption {
-  margin: 5px 0 20px 0;
-  padding: 23px 5% 15px;
-  font-size: 130%;
-  line-height: 1.5;
-  font-weight: bold;
-  text-align: center;
-  background: white;
-  border-radius: 2px;
-}
+  .main {
 
-.educational-career {
-  padding: 5px 5%;
-  background: white;
-}
+  }
 
-.career {
-  padding: 5px 5%;
-}
+  .main-image {
+    width: 100%;
+    margin: 5px auto 0;
+  }
 
-.educational-career ul,
-.career ul {
-  text-align: center;
-}
+  .main-image .bx-wrapper {
+    border: none;
+    box-shadow: none;
+  }
 
-.educational-career ul li,
-.career ul li {
-  padding: 10px 0;
-  list-style: none;
-  font-size: 140%;
-}
+  .main-image img {
+    width: 100%;
+  }
 
-.about-class {
-  padding: 5px 5%;
-  background: white;
-}
+  .desc {
+    background: #f9f5f2;
+    padding: 15px 1%;
+  }
 
-.about-class ul {
-  padding-left: 0;
-  text-align: center;
-}
+  .desc p {
+    text-align: center;
+    font-size: 120%;
+  }
 
-.about-class ul li {
-  font-size: 140%;
-  padding: 10px;
-  list-style: none;
+  .step {
+    margin-top: 0;
+  }
+
+  .desc p {
+    text-align: center;
+    font-size: 120%;
+  }
+
+  .step-box-block {
+    margin-top: 50px;
+  }
+
+  .step-box .num {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 3px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: #4b5357;
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
+    border-radius: 50%;
+  }
+
+  .step-box .caption {
+    margin: -15px 0 20px 0;
+    padding: 23px 5% 15px;
+    font-size: 130%;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+    background: #f9f5f2;
+    border-radius: 2px;
+  }
+
+  .career {
+    background: #f9f5f2;
+    padding: 5px 5%;
+  }
+
+  .career ul {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .career-list {
+    padding-top: 20px;
+  }
+
+  .career ul li {
+    padding: 5px 0;
+    list-style: none;
+    font-size: 120%;
+  }
+
+  .about-class {
+    padding: 5px 5%;
+    /*background: white;*/
+  }
+
+  .about-class ul {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .about-class ul li {
+    font-size: 120%;
+    padding: 10px;
+    list-style: none;
+  }
 }

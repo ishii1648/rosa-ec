@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>rosa ec英語教室</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" >
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster" rel="stylesheet">
+    <link href="lib/jquery.bxslider.css" rel="stylesheet" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="lib/jquery.bxslider.min.js"></script>
     <script src="https://use.fontawesome.com/27af955653.js"></script>
   </head>
   <body>
     <div class="header container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-12 title-block">
           <h1><a href="#">Rosa EC 英語教室</a></h1>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 nav">
           <ul>
             <li><a href="#char-title"><i class="fa fa-cube" aria-hidden="true"></i>教室の特徴</a></li>
-            <li><a href="#educational-career-title"<i class="fa fa-graduation-cap" aria-hidden="true"></i>講師学歴</a></li>
             <li><a href="#career-title"><i class="fa fa-user" aria-hidden="true"></i>講師経歴</a></li>
             <li><a href="#about-class-title"><i class="fa fa-bookmark" aria-hidden="true"></i>教室について</a></li>
           </ul>
@@ -30,31 +33,48 @@
     </div>
     <div class="main">
       <div class="main-image">
-        <img src="img/main.jpg" alt="">
-      </div>
+        <ul class="bxslider">
+          <li><img src="img/image1.jpg" alt=""></li>
+          <li><img src="img/image2.jpg" alt=""></li>
+          <li><img src="img/image3.jpg" alt=""></li>
+          <li><img src="img/image4.jpg" alt=""></li>
+        </ul>
+        <script>
+          $(document).ready(function(){
+            $('.bxslider').bxSlider({
+              mode     : 'horizontal',
+              speed    : 1300,
+              auto     : true,
+              controls : false
+            });
+          });
+        </script>
+      </div><!-- /.main-image -->
       <div class="desc">
         <div class="container">
-          <p>これからの英語教育は受験英語という受け身の勉強から<br/>
-          「読む」「書く」「聞く」「話す」技能が求められていきます。</p>
+          <p>これからの英語教育は受験英語という</p>
+          <p>受け身の勉強から</p>
+          <p>「読む」「書く」「聞く」「話す」技能が</p>
+          <p>求められていきます。</p>
         </div>
       </div><!-- /.desc -->
       <div class="char">
         <div class="container">
           <h3 id="char-title"><i class="fa fa-cube" aria-hidden="true"></i>教室の特徴</h3>
           <div class="row step">
-            <div class="col-md-4">
+            <div class="col-md-4  col-xs-12 step-box-block">
               <div class="step-box">
         				<div class="num">1</div>
         				<div class="caption">ひとりひとりの個性に合わせた<br/>1対1のレッスンです</div>
         			</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4  col-xs-12 step-box-block">
               <div class="step-box">
         				<div class="num">2</div>
         				<div class="caption">実用英語技能検定（英検）を<br/>活用して、ひとりひとりの<br/>英語を測りながら<br/>伸ばしていきます</div>
         			</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4  col-xs-12 step-box-block">
               <div class="step-box">
         				<div class="num">3</div>
         				<div class="caption">中学生と大学生が中心ですが<br/>大学生や大人の方も<br/>教えています</div>
@@ -63,23 +83,22 @@
           </div>
         </div>
       </div><!-- /.char -->
-      <div class="educational-career">
-        <h3 id="educational-career-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i>講師学歴</h3>
-        <div class="container">
-          <ul>
-            <li>中央大学　文学部　卒業</li>
-            <li>サンタ・ローザ ジュニアカレッジ 卒業</li>
-            <li>オレゴン大学　言語学部　卒業</li>
-          </ul>
-        </div>
-      </div><!-- /.educational-career -->
       <div class="career">
-        <h3 id="career-title"><i class="fa fa-user" aria-hidden="true"></i>講師職歴</h3>
+        <h3 id="career-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i>講師経歴</h3>
         <div class="container">
-          <ul>
-            <li>日本アイ・ビー・エム（株）</li>
-            <li>富山短期大学非常勤講師</li>
-          </ul>
+          <div class="col-md-6  col-xs-12">
+            <ul>
+              <li>中央大学　文学部　卒業</li>
+              <li>サンタ・ローザ ジュニアカレッジ 卒業</li>
+              <li>オレゴン大学　言語学部　卒業</li>
+            </ul>
+          </div>
+          <div class="col-md-6  col-xs-12">
+            <ul class="career-list">
+              <li>日本アイ・ビー・エム（株）</li>
+              <li>富山短期大学非常勤講師</li>
+            </ul>
+          </div>
         </div>
       </div><!-- /.educational-career -->
       <div class="about-class">
